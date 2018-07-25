@@ -13,7 +13,7 @@ pipeline {
     }
     stage('step 2') {
       when {
-        branch 'production'
+        branch 'master'
       }
       parallel {
         stage('step 2') {
