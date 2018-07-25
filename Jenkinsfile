@@ -4,7 +4,7 @@ pipeline {
     stage('step 1') {
       steps {
         sh 'sleep 1'
-        sh 'docker -v'
+        sh 'echo env.BRANCH_NAME'
       }
     }
     stage('Test') {
