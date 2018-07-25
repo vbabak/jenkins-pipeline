@@ -17,7 +17,7 @@ pipeline {
         stage('step 2 parallel') {
           steps {
             echo 'Step 2 parallel'
-            sh 'exit 1'
+            sh 'exit 0'
           }
         }
       }
