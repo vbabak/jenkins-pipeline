@@ -30,6 +30,22 @@ pipeline {
         }
       }
     }
+    stage('step 3') {
+      parallel {
+        stage('step 3') {
+          steps {
+            sh 'sleep 1'
+            sh 'sleep 2'
+          }
+        }
+        stage('step 3 parallel') {
+          steps {
+            echo 'Step 2 parallel'
+            sh 'exit 0'
+          }
+        }
+      }
+    }
   }
 }
 
