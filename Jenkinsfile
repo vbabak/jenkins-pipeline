@@ -4,6 +4,7 @@ pipeline {
     stage('step 1') {
       steps {
         sh 'sleep 1'
+        sh 'docker -v'
       }
     }
     stage('Test') {
