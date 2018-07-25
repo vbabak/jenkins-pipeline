@@ -1,20 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('task1') {
-      if (env.BRANCH_NAME == 'task1') {
-        echo 'I only execute on the task1 branch'
-        steps {
-          sh 'sleep 1'
-        }
+    stage('step 1') {
+      steps {
+        sh 'sleep 1'
       }
     }
     stage('Test') {
-      when {
-        branch 'develop'
-      }
       steps {
-        echo 'Testing "develop" is OK'
+        echo 'Testing is OK'
       }
     }
     stage('step 2') {
