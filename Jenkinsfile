@@ -4,7 +4,6 @@ pipeline {
     stage('step 1') {
       steps {
         sh 'sleep 1'
-        sh 'exit 1'
       }
     }
     stage('step 2') {
@@ -15,9 +14,9 @@ pipeline {
             sh 'sleep 2'
           }
         }
-        stage('step 1 fails') {
+        stage('step 2 parallel') {
           steps {
-            echo 'Step 1 failed'
+            echo 'Step 2 parallel'
           }
         }
       }
