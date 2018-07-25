@@ -6,6 +6,11 @@ pipeline {
         sh 'sleep 1'
       }
     }
+    stage('Test') {
+      steps {
+        echo 'Testing is OK'
+      }
+    }
     stage('step 2') {
       parallel {
         stage('step 2') {
