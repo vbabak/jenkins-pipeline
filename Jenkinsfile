@@ -34,9 +34,7 @@ node {
   stage('step 1') {
     if (env.BRANCH_NAME == 'task1') {
       echo 'I only execute on the task1 branch'
-      steps {
-        sh 'sleep 1'
-      }
+      sh 'sleep 1'
     }
   }
 }
